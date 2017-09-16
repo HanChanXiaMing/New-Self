@@ -13,15 +13,13 @@ class Application(Frame):
    def creatWidgets(self):
     self.nameInput = Entry(self)
     self.nameInput.pack()
-    
     self.alertButton = Button(self, text = 'Hello', command = self.hello)
     self.alertButton.pack()
     
    def hello(self):
     name = self.nameInput.get() or 'World'
     messagebox.showinfo('Message', 'Hello, %s' % name)
-    
-# 实例化Application，并启动消息循环    
+        
 app = Application()
 # 设置窗口标题:
 app.master.title('Hello World')
